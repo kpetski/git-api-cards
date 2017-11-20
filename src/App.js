@@ -21,9 +21,10 @@ const Card = (props) => {
       <img width="75" src={props.avatar_url} alt=""/>
       <div style={{display: 'inline-block', marginLeft: 10}}>
         <div style={{fontSize: '1.25em', fontWeight: 'bold'}}>
-          {props.name}
+          {props.name || props.login}
         </div>
         <div>{props.company}</div>
+        <div># of pulic repos: {props.public_repos}</div>
       </div>
     </div>
   )
